@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          React is so cool!
         </p>
         <a
           className="App-link"
@@ -17,6 +17,15 @@ function App() {
         >
           Learn React
         </a>
+
+        <h1>First React Project</h1>
+        <p>This will be updated over the rest of the course</p>
+        <ul>
+           <li>bears</li>
+           <li>beets</li>
+           <li>battlestar galactica</li>   
+
+        </ul>
       </header>
     </div>
   );
