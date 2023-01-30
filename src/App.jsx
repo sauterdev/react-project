@@ -1,34 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          React is so cool!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-        <h1>First React Project</h1>
-        <p>This will be updated over the rest of the course</p>
+    this.state = {
+      list: ["ready", "set", "GO"],
+      text:  ""
+    }
+
+    this.onSubmit = this.onSubmit.bind(this);
+
+  }
+
+  onSubmit(event) {
+    event.preventDefault();
+    this.setState({
+      list: [...this.state.list, this.state.text]
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>
+          Hello World!
+        </h1>
         <ul>
-           <li>bears</li>
-           <li>beets</li>
-           <li>battlestar galactica</li>   
-
+          <form onSubmit={this.onSubmit}>
+          <input type="text" name="textInput" id="textInput" 
+          value={this.state.text}
+          onChange={(event) => this.setState({
+            text: event.target.value
+          })
+        }/>
+          <button type="submit">Add</button>
+          </form>
+          {this.state.list.map((ele, index) => {
+            return <li key={index}>{ele}</li>
+          })}
         </ul>
-      </header>
-    </div>
-  );
+      </div>
+    )
+  }
 }
 
 export default App;
