@@ -1,22 +1,37 @@
 body {
-    background-color: #282c34;
-    color:rgb(229, 231, 233)
+  background-color: #282c34;
+  color: rgb(229, 231, 233);
 }
 
 li {
-    list-style-type: none;
-   
+  list-style-type: none;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 /* unordered list containing films */
 .tiles {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.film-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.form-group > select {
+    font-size: inherit;
 }
