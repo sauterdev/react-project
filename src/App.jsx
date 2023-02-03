@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, NavLink, Routes, Route } from "react-router-dom"
-import { HomePage, FilmsPage } from "./pages";
+import { HomePage, FilmsPage, SingleFilmPage } from "./pages";
 import "./App.css";
 import "./components/filmsListStyle.css"
 
@@ -17,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="films" element={<FilmsPage />}></Route>
+        <Route path="film/:id" element={<SingleFilmPage />}></Route>
       </Routes>
     </BrowserRouter>
   )

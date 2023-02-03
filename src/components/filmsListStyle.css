@@ -35,3 +35,15 @@ li {
 .form-group > select {
     font-size: inherit;
 }
+
+.single-film-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.director-data {
+  padding-left: 2rem;
+}

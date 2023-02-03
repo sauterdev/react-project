@@ -14,6 +14,25 @@ export function getListOf(list, string) {
         }
     })
     return newArr;
+}
+
+export function getFilmStats(arr) {
+    let rtScoreAcc = 0;
+    let mostRecent = 0;
+    arr.forEach((ele) => {
+        rtScoreAcc += parseInt(ele.rt_score)
+        if(mostRecent < ele.release_date) {
+            mostRecent = ele.release_date;
+        }
+    })
+    return(
+        {
+            acc_score: rtScoreAcc,
+            avg_score: rtScoreAcc / arr.length,
+            total: arr.length,
+            latest: mostRecent
+        }
+    )
 
 }
 
